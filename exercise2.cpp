@@ -13,23 +13,25 @@ int main()
     string fileName = "/exercise1.txt";
     string file = currentDirectory + fileName;
 
-
-    ifstream myFile; 
-    // open a new file with the ofstream file handler
+    // open a new file with the ifstream file handler
+    ifstream myFile;
     myFile.open(file);
 
     // check if the file is opened
-    // write text into the file
+    // read from the file
     if (myFile.is_open())
     {
-        myFile << "Charles Ayodipupo Adeniji: This is the first exercise in file handling";
+        string lineFromFile;
         // close the file
+        while (std::getline(myFile, lineFromFile))
+        {
+            cout << lineFromFile << endl;
+        }
         myFile.close();
-        cout << "file written to and closed";
     }
     else
     {
-        cout << "Unable to open the file for writing" << endl;
+        cout << "Unable to open the file for reading" << endl;
     }
 
     return 0;
