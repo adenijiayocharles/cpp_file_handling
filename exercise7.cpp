@@ -42,6 +42,10 @@ int main()
             }
             readFile.close();
         }
+        else
+        {
+            cout << "Unable to open file for reading";
+        }
 
         // close the file
         myFile.close();
