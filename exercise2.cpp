@@ -1,4 +1,4 @@
-// Question: Write a C++ program to create a new text file and write some text into it.
+// 2. Write a C++ program to open an existing text file and display its contents on the console.
 #include <iostream>
 #include <fstream>
 #include <filesystem>
@@ -8,13 +8,13 @@ using std::filesystem::current_path;
 
 int main()
 {
-    ofstream myFile;
-
     // get the current working directory
     string currentDirectory = current_path();
     string fileName = "/exercise1.txt";
     string file = currentDirectory + fileName;
 
+
+    ifstream myFile; 
     // open a new file with the ofstream file handler
     myFile.open(file);
 
@@ -22,8 +22,7 @@ int main()
     // write text into the file
     if (myFile.is_open())
     {
-        myFile << "Charles Ayodipupo Adeniji: This is the first exercise in file handling \n";
-        myFile << "This is another line in the text file";
+        myFile << "Charles Ayodipupo Adeniji: This is the first exercise in file handling";
         // close the file
         myFile.close();
         cout << "file written to and closed";
