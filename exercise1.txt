@@ -4,3 +4,4 @@ This is my sentence to be added to the file
 this is a test of appending to a file
 this is it
 jhjk jhjh jh
+this is the new last line

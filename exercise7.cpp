@@ -30,25 +30,25 @@ int main()
         myFile << "\n"
                << word;
 
-        // print each line from the file to confirm code worked
-        ifstream readFile;
-        readFile.open(file);
-        if (readFile.is_open())
-        {
-            string line;
-            while (getline(readFile, line))
-            {
-                cout << line << endl;
-            }
-            readFile.close();
-        }
-        else
-        {
-            cout << "Unable to open file for reading";
-        }
-
         // close the file
         myFile.close();
+    }
+
+    // print each line from the file to confirm code worked
+    ifstream readFile;
+    readFile.open(file);
+    if (readFile.is_open())
+    {
+        string line;
+        while (getline(readFile, line))
+        {
+            cout << line << endl;
+        }
+        readFile.close();
+    }
+    else
+    {
+        cout << "Unable to open file for reading";
     }
 
     return 0;
