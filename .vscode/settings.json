@@ -3,6 +3,7 @@
         "*.ejs": "html",
         "iostream": "cpp",
         "fstream": "cpp",
-        "ios": "cpp"
+        "ios": "cpp",
+        "iosfwd": "cpp"
     }
 }

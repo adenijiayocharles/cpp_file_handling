@@ -25,7 +25,9 @@ at
 before
 between
 by
-Nigeria
+nigeria
+ghana
+england
 down
 from
 in
