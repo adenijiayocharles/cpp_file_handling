@@ -23,6 +23,7 @@ int main()
     // open the file with append write mode passed as second param
     myFile.open(file);
 
+    // check if the file is open
     if (myFile.is_open())
     {
         string lineContent;
