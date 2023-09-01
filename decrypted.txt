@@ -1,0 +1,7 @@
+Charles Ayodipupo Adeniji: This is the first exercise in file handling 
+This is another line in the text fileThisPlease input any sentence of your choice: 
+This is my sentence to be added to the file
+this is a test of appending to a file
+this is it
+jhjk jhjh jh
+this is the new last line

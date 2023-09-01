@@ -1,4 +1,4 @@
-// Create a C++ program to encrypt a text file's contents using a straightforward encryption algorithm.
+// Create a C++ programme to decode a text file's contents that has been encrypted with the aforementioned algorithm.
 #include <iostream>
 #include <fstream>
 #include <filesystem>
@@ -10,7 +10,7 @@ int main()
 {
     // get the current working directory
     string currentDirectory = current_path();
-    string fileName = "/file_to_encrypt.txt";
+    string fileName = "/encrypted.txt";
     string file = currentDirectory + fileName;
     int encryptionKey = 1;
 
@@ -26,21 +26,18 @@ int main()
     // check if the file is open
     if (myFile.is_open())
     {
-        // create encrypted file handler
-        string encryptedFileName = "/encrypted.txt";
+        // create decrypted file handler
+        string encryptedFileName = "/decrypted.txt";
         string encryptedFile = currentDirectory + encryptedFileName;
+
         ofstream outputFile;
         outputFile.open(encryptedFile, ios::app);
 
         // loop each xter and encrypt
         while (myFile >> noskipws >> c)
         {
-            int temp = (c + encryptionKey);
-
-            if (outputFile.is_open())
-            {
-                outputFile << (char)temp;
-            }
+            int temp = c - encryptionKey;
+            outputFile << (char)temp;
         }
 
         outputFile.close();
